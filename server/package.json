@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "start": "ts-node server.ts"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "graphql-yoga": "^1.18.3",
+    "lodash": "^4.17.19",
+    "typescript": "^3.9.7",
+    "xstate": "^4.11.0"
+  }
+}
