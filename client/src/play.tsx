@@ -3,14 +3,13 @@ import ReactDOM from "react-dom";
 import {
   ThemeProvider,
   theme,
+  CSSReset,
   Input,
   Button,
   Grid,
-  CSSReset,
   SimpleGrid,
   Box,
   Text,
-  Icon,
 } from "@chakra-ui/core";
 import {
   ApolloProvider,
@@ -128,11 +127,12 @@ const Prompt = ({ playerId, gameState }) => {
 
   return (
     <>
-      <Text fontSize="xl">When you think of</Text>
+      <Text fontSize="xl">
+        What's the first thing that comes to mind when you think about ...
+      </Text>
       <Text fontSize="3xl">
         <strong>{gameState.players[playerId].prompt}</strong>
       </Text>
-      <Text fontSize="xl">you think?</Text>
       <Box mt={5}>
         <Input
           placeholder="Response"
@@ -189,15 +189,9 @@ const Vote = ({ playerId, gameState }) => {
         <strong>{gameState.players[gameState.voteOn].response}</strong>
       </Text>
       <Grid gridTemplateColumns="repeat(3, 33%)" gap={2} mt={3}>
-        <Button onClick={() => onRegisterVote(-1)}>
-          <Icon name="triangle-down" />
-        </Button>
-        <Button onClick={() => onRegisterVote(0)}>
-          <Icon name="minus" />
-        </Button>
-        <Button onClick={() => onRegisterVote(1)}>
-          <Icon name="triangle-up" />
-        </Button>
+        <Button onClick={() => onRegisterVote(-1)}>👍</Button>
+        <Button onClick={() => onRegisterVote(0)}>😐</Button>
+        <Button onClick={() => onRegisterVote(1)}>👎</Button>
       </Grid>
     </>
   );

@@ -27,8 +27,8 @@ const App = () => {
 
   return (
     <Box p={5} textAlign="center" maxWidth={800} margin="auto">
-      <Text fontSize="3xl">
-        <strong>Welcome to the game!</strong>
+      <Text fontSize="5xl">
+        <strong>Firsties!</strong>
       </Text>
       <Button onClick={() => startGame()}>Start A Game</Button>
     </Box>

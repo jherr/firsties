@@ -34,10 +34,17 @@ const App = () => {
 
   return (
     <Box p={5} maxWidth={800} margin="auto">
+      <Box my={5}>
+        <Text fontSize="5xl" textAlign="center">
+          <strong>Firsties!</strong>
+        </Text>
+      </Box>
       {data.gameState.state === "REGISTRATION" && (
         <Box my={5}>
           <Text fontSize="3xl">
-            <a href={`/play.html?game=${game}`}>/play.html?game={game}</a>
+            <a href={`http://localhost:1234/play.html?game=${game}`}>
+              http://localhost:1234/play.html?game={game}
+            </a>
           </Text>
         </Box>
       )}
